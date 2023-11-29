@@ -54,7 +54,7 @@ docker stop {id}/{name}
 
 Now that you have a container on your local machine you no longer need step 3.2 to run it. You can simply use the following command:
 ```console
-docker start {id}/{name}
+    docker start {id}/{name}
 ```
 
 Do keep in mind that whatever tags you have given in step 3.2 when running the container shall remain when you start the container at this point.
@@ -64,7 +64,7 @@ Do keep in mind that whatever tags you have given in step 3.2 when running the c
 #### 3.5.1 Check if the container is running
  To view all containers that are currently running, use: 
 ```console
- docker ps
+    docker ps
  ```
 Please make sure that your container is listed and running.
 
