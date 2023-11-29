@@ -2,6 +2,7 @@
 const express = require("express")
 const app = express()
 
+// Log the request to console every time someone sends a request to the server
 app.use((req, res, next) =>{
     console.log(`new request from ${req.ip}: method:${req.method}, endpoint:'${req.url}' . `)
     next();
