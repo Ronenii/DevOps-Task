@@ -124,7 +124,7 @@ To run the docker compose file, use the following command:
 docker compose up
 ```
 
-You can repeat step 3.5.1: #351-check-if-the-container-is-running to check if the containers are running. Repeat step 3.5.2: #352-check-if-the-server-is-up to verify the server is running. To check if the reverse proxy server is also running properly, follow step 4.1: #41-bonus-reverse-proxy.
+You can repeat step [3.5.1](#351-check-if-the-container-is-running) to check if the containers are running. Repeat step [3.5.2](#352-check-if-the-server-is-up) to verify the server is running. To check if the reverse proxy server is also running properly, follow step [4.1](#41-bonus-reverse-proxy).
 
 ## 4. Usage
 
@@ -132,8 +132,7 @@ The server is configured to listen on port 3000. You can only request '/' as an 
 
 ## 4.1 BONUS: Reverse Proxy
 
-If you choose to run the server with the reverse proxy server, you can send requests without specifying the port since the reverse proxy server is listening on port 80:
-
+If you choose to run the server with the reverse proxy server, you can send requests without specifying the port since the reverse proxy server is listening on port 80.
 ```bash
 curl http://localhost/
 ```
