@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  devops-task:
+  web-server:
     image: ronenii/devops-task:1.0
     environment:
       NODE_ENV: production
@@ -22,7 +22,7 @@ services:
     networks: 
       - my-network
     depends_on: 
-      - devops-task
+      - web-server
   
 networks: 
   my-network:
