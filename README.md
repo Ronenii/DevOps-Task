@@ -8,6 +8,9 @@
     - [3.2 Create the container](#32-create-the-container)
     - [3.3 Stop the container from running](#33-stop-the-container-from-running)
     - [3.4 Start the container again](#34-start-the-container-again)
+    - [3.5 Testing](#35-testing)
+      - [3.5.1 Check if the container is running](#351-check-if-the-container-is-running)
+      - [3.5.2 Check if the server is up](#352-check-if-the-server-is-up)
   - [4. Usage](#4-usage)
 
 ## 1. Technologies used
@@ -55,6 +58,19 @@ docker start {id}/{name}
 ```
 
 Do keep in mind that whatever tags you have given in step 3.2 when running the container shall remain when you start the container at this point.
+
+### 3.5 Testing
+
+#### 3.5.1 Check if the container is running
+
+Use ```diff 
+docker ps``` to view all containers that are currently running. Please make sure that your container is listed and running.
+
+#### 3.5.2 Check if the server is up
+
+If the container is up and running, you can try and GET [http://localhost:3000/].
+
+You should receive a Hello World! html file as a response.
 
 ## 4. Usage
 
