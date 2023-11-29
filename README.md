@@ -7,6 +7,7 @@
     - [3.1 Pulling the image](#31-pulling-the-image)
     - [3.2 Create the container](#32-create-the-container)
     - [3.3 Stop the container from running](#33-stop-the-container-from-running)
+    - [3.4 Start the container again](#34-start-the-container-again)
   - [4. Usage](#4-usage)
 
 ## 1. Technologies used
@@ -39,7 +40,7 @@ This will create a container with a random name and an ID.
 
 ### 3.3 Stop the container from running
 You have multiple ways to stop the container:
-* ``` diff
+``` diff
 docker stop {id}/{name}
 ```
 * If the docker is not running in detached mode and has an init service you can use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
