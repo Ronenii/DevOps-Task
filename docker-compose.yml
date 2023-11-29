@@ -1,14 +1,30 @@
 version: '3.4'
 
 services:
-  devopstask:
-    image: devopstask
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+  web-server:
+    image: ronenii/devops-task:1.0
     environment:
       NODE_ENV: production
-    ports:
-      - 3000:3000
+    ports: 
+    - 3000:3000
     restart: always
+    networks: 
+      - my-network
+      
 
+  reverse-proxy: 
+    image: ronenii/nginx-rproxy:1.0
+    environment:
+      NODE_ENV: production
+    ports: 
+      - 80:80
+    restart: always
+    networks: 
+      - my-network
+    depends_on: 
+      - web-server
+  
+networks: 
+  my-network:
+
+   
