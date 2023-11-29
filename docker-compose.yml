@@ -2,12 +2,7 @@ version: '3.4'
 
 services:
   devopstask:
-    image: node:21.2
-    restart_policy:
-      condition: any
-        delay: 5s
-        max_attempts: 3
-        window: 120s
+    image: devopstask
     build:
       context: .
       dockerfile: ./Dockerfile
@@ -15,3 +10,5 @@ services:
       NODE_ENV: production
     ports:
       - 3000:3000
+    restart: always
+

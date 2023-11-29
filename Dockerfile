@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # install dependencies
-RUN npm install express
+RUN npm ci
 
 # copy src code to the workdir
 COPY . .
