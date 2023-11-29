@@ -23,6 +23,7 @@
 * Programming language: Node.js 21.2
 * Backend framework: Express
 * Containerization: Docker
+* Reverse proxy server: Nginx
 
 ## 2. Overview
 
