@@ -26,12 +26,12 @@ Please note you will need sudo privileges in order to run docker commands.
 
 ### 3.1 Pulling the image
 For the server to work you will first need to pull the image from [Dockerhub](https://hub.docker.com/).
-```diff
+```Console
     docker pull ronenii/devops-task:1.0
 ```
 ### 3.2 Create the container
 After you have successfully pulled the image, you can create and run the server container on your machine (be it Linux or Windows) using the following command:
-```diff
+```Console
     docker run -p 3000:3000 ronenii/devops-task:1.0
 ```
 This will create a container with a random name and an ID.
@@ -43,7 +43,7 @@ This will create a container with a random name and an ID.
 
 ### 3.3 Stop the container from running
 You have multiple ways to stop the container:
-``` diff
+```console
 docker stop {id}/{name}
 ```
 * If the docker is not running in detached mode and has an init service you can use <kbd>Ctrl</kbd> + <kbd>C</kbd>.
@@ -53,7 +53,7 @@ docker stop {id}/{name}
 ### 3.4 Start the container again
 
 Now that you have a container on your local machine you no longer need step 3.2 to run it. You can simply use the following command:
-```diff
+```console
 docker start {id}/{name}
 ```
 
@@ -62,14 +62,15 @@ Do keep in mind that whatever tags you have given in step 3.2 when running the c
 ### 3.5 Testing
 
 #### 3.5.1 Check if the container is running
-
-Use ```diff 
-docker ps``` to view all containers that are currently running. Please make sure that your container is listed and running.
+ To view all containers that are currently running, use: 
+```console
+ docker ps
+ ```
+Please make sure that your container is listed and running.
 
 #### 3.5.2 Check if the server is up
 
 If the container is up and running, you can try and GET [http://localhost:3000/].
-
 You should receive a Hello World! html file as a response.
 
 ## 4. Usage
